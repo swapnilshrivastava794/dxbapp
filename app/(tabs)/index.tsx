@@ -1,28 +1,44 @@
-import { Image, StyleSheet, Platform, View,Text } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
+import TopBar from '@/components/TopBar';
+import RunningText from '@/components/RunningText';
+import BreakingNewsSlider from '@/components/BreakingNewsSlider';
 import { ThemedView } from '@/components/ThemedView';
+import NewsFeed from '@/components/NewsFeed';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Home Page</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      {/* Top Bar */}
+      <TopBar />
+
+      {/* Running Text Below the Top Bar */}
+      <View style={styles.runningTextContainer}>
+        <RunningText />
+      </View>
+
+      {/* Main Content */}
+      <ThemedView style={styles.content}>
+        <BreakingNewsSlider />
+        <NewsFeed />
+      </ThemedView>
+
+      
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#f8f9fa',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+  runningTextContainer: {
+    marginTop: 10,
+  },
+  content: {
+    flex: 1, // Ensures BreakingNewsSlider takes available space
+    padding: 10,
+    backgroundColor: '#f0f0f0',
   },
 });

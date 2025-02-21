@@ -4,7 +4,7 @@
     "slug": "dnnapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash_screen.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,7 +14,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#3780C3"
       }
     },
     "web": {
@@ -27,13 +27,17 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "image": "./assets/images/splash_screen.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#3780C3"
         }
       ]
     ],
+    "splash": {
+      "image": "./assets/images/splash_screen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#3780C3"
+    },
     "experiments": {
       "typedRoutes": true
     }

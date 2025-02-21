@@ -1,26 +1,42 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 
-const video = () => {
+import TopBar from '@/components/TopBar';
+import RunningText from '@/components/RunningText';
+import { ThemedView } from '@/components/ThemedView';
+import VideoGridScreen from '@/components/VideoGridScreen';
+
+const VideoScreen = () => {
   return (
-    <View style={styles.container}>
-    <Text style={styles.title}>Video Page</Text>
-  </View>
-  )
-}
+    <SafeAreaView style={styles.safeArea}>
+      {/* Top Bar */}
+      <TopBar />
 
-export default video
+      {/* Running Text Below the Top Bar */}
+      <View style={styles.runningTextContainer}>
+        <RunningText />
+      </View>
+
+      {/* Main Content */}
+      <ThemedView style={styles.content}>
+        <VideoGridScreen />
+      </ThemedView>
+    </SafeAreaView>
+  );
+};
+
+export default VideoScreen;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f8f9fa',
-      },
-      title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#333',
-      },
-})
+  safeArea: {
+    flex: 1, // Ensure SafeAreaView fills screen
+    backgroundColor: '#f8f9fa',
+  },
+  runningTextContainer: {
+    marginVertical: 10,
+  },
+  content: {
+    flex: 1, // Make ThemedView expand
+    paddingHorizontal: 10,
+    paddingTop: 10,
+  },
+});
