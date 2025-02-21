@@ -48,6 +48,17 @@ const newsData = [
     userAvatar: require('../assets/images/user1.png'),
     postImage: require('../assets/images/news1.png'),
   },
+  {
+    id: '5',
+    username: 'Raman__Singh',
+    title: 'Amazon Super Value Days: Get up to 50% off on the best ghee brands and make.',
+    time: '5:40 PM',
+    date: 'Today',
+    comments: 35,
+    category: 'Politics', // Another Politics news
+    userAvatar: require('../assets/images/user1.png'),
+    postImage: require('../assets/images/news1.png'),
+  },
 ];
 
 export default function NewsFeed() {

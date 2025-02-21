@@ -35,19 +35,19 @@ const ProfileScreen = () => {
       {/* Profile Section */}
       <View style={styles.profileContainer}>
         <Image
-          source={{ uri: "https://markaziasolutions.com/mi-hrms/assets/front_end/images/hero_1.jpg" }}
+          source={{ uri: "https://surl.li/vohucx" }}
           style={styles.profileBackground}
         />
         <View style={styles.profileDetails}>
           <Image
             source={{ uri: "https://markaziasolutions.com/mi-hrms/uploads/profile_pic/1727779800harinandbhatt.jpg" }}
-            style={[styles.profileImage, { borderColor: darkMode ? "#666" : "#fff" }]} // Dark Mode Border
+            style={[styles.profileImage, { borderColor: darkMode ? "#fff" : "#fff" }]} // Dark Mode Border
           />
           <TouchableOpacity style={styles.editIcon}>
             <Icon name="pencil" size={18} color="#fff" />
           </TouchableOpacity>
-          <Text style={[styles.profileName, { color: darkMode ? "#fff" : "#000" }]}>Harshad Mehta</Text>
-          <Text style={[styles.joinDate, { color: darkMode ? "#bbb" : "#666" }]}>Joined on 20 May 2023</Text>
+          <Text style={[styles.profileName, { color: darkMode ? "#fff" : "#fff" }]}>Harshad Mehta</Text>
+          <Text style={[styles.joinDate, { color: darkMode ? "#bbb" : "#fff" }]}>Joined on 20 May 2023</Text>
         </View>
       </View>
 

@@ -5,6 +5,9 @@ import RunningText from '@/components/RunningText';
 import BreakingNewsSlider from '@/components/BreakingNewsSlider';
 import { ThemedView } from '@/components/ThemedView';
 import NewsFeed from '@/components/NewsFeed';
+ 
+
+
 
 export default function HomeScreen() {
   return (
