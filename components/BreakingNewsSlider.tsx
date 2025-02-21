@@ -17,7 +17,7 @@ const newsData = [
     id: '2',
     title: 'Breaking News 2',
     description: "Major earthquake in Asia; tremors felt across multiple countries.",
-    image: { uri: 'https://img.youtube.com/vi/ANd5zEOqwTg/mqdefault.jpg' },
+    image: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Smart_Tourism.jpg' },
   },
   {
     id: '3',
@@ -29,7 +29,7 @@ const newsData = [
     id: '4',
     title: 'Breaking News 4',
     description: "New AI technology changes the job market forever.",
-    image: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Smart_Tourism.jpg' },
+    image: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Saudi_Arabia_welcomes_Trump-Putin_summit.jpg' },
   },
 ];
 

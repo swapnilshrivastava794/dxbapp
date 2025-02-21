@@ -5,16 +5,14 @@ import RunningText from '@/components/RunningText';
 import { ThemedView } from '@/components/ThemedView';
 import BookmarkScreen from '@/components/BookmarkScreen';
 
+
 const saved = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <TopBar />
-      <View style={styles.runningTextContainer}>
-        <RunningText />
-      </View>
-
+      
       {/* Main Content */}
       <ThemedView style={styles.content}>
+      
       <BookmarkScreen />
       </ThemedView>
     </SafeAreaView>
@@ -25,15 +23,16 @@ const saved = () => {
 export default saved;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f8f9fa',
-      },
-      title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#333',
-      },
-})
+  safeArea: {
+    flex: 1, // Ensure SafeAreaView fills screen
+    backgroundColor: '#f8f9fa',
+  },
+  runningTextContainer: {
+    marginVertical: 10,
+  },
+  content: {
+    flex: 1, // Make ThemedView expand
+    paddingHorizontal: 10,
+    paddingTop: 10,
+  },
+});

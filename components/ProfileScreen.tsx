@@ -22,11 +22,13 @@ const ProfileScreen = () => {
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity>
-          <Icon name="arrow-back" size={24} color="#000" />
+          <Icon name="arrow-back" size={24} color={darkMode ? "#fff" : "#000"} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Profile</Text>
+        <Text style={[styles.headerTitle, { color: darkMode ? "#fff" : "#000" }]}>
+          Profile
+        </Text>
         <TouchableOpacity>
-          <Icon name="settings-outline" size={24} color="#000" />
+          <Icon name="settings-outline" size={24} color={darkMode ? "#fff" : "#000"} />
         </TouchableOpacity>
       </View>
 
@@ -39,25 +41,25 @@ const ProfileScreen = () => {
         <View style={styles.profileDetails}>
           <Image
             source={{ uri: "https://markaziasolutions.com/mi-hrms/uploads/profile_pic/1727779800harinandbhatt.jpg" }}
-            style={styles.profileImage}
+            style={[styles.profileImage, { borderColor: darkMode ? "#666" : "#fff" }]} // Dark Mode Border
           />
           <TouchableOpacity style={styles.editIcon}>
             <Icon name="pencil" size={18} color="#fff" />
           </TouchableOpacity>
-          <Text style={styles.profileName}>Harshad Mehta</Text>
-          <Text style={styles.joinDate}>Joined on 20 May 2023</Text>
+          <Text style={[styles.profileName, { color: darkMode ? "#fff" : "#000" }]}>Harshad Mehta</Text>
+          <Text style={[styles.joinDate, { color: darkMode ? "#bbb" : "#666" }]}>Joined on 20 May 2023</Text>
         </View>
       </View>
 
       {/* Options List */}
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.menuContainer}>
-          <View style={styles.menuItem}>
-            <Text style={styles.menuText}>Notifications</Text>
+        <View style={[styles.menuContainer, darkMode && styles.darkMenu]}>
+          <View style={[styles.menuItem, { borderBottomColor: darkMode ? "#444" : "#eee" }]}>
+            <Text style={[styles.menuText, { color: darkMode ? "#fff" : "#000" }]}>Notifications</Text>
           </View>
 
-          <View style={styles.menuItem}>
-            <Text style={styles.menuText}>Dark Mode</Text>
+          <View style={[styles.menuItem, { borderBottomColor: darkMode ? "#444" : "#eee" }]}>
+            <Text style={[styles.menuText, { color: darkMode ? "#fff" : "#000" }]}>Dark Mode</Text>
             <Switch
               value={darkMode}
               onValueChange={() => setDarkMode(!darkMode)}
@@ -77,18 +79,18 @@ const ProfileScreen = () => {
             "Help Centre",
             "Terms and Conditions",
           ].map((item, index) => (
-            <TouchableOpacity key={index} style={styles.menuItem}>
-              <Text style={styles.menuText}>{item}</Text>
+            <TouchableOpacity key={index} style={[styles.menuItem, { borderBottomColor: darkMode ? "#444" : "#eee" }]}>
+              <Text style={[styles.menuText, { color: darkMode ? "#fff" : "#000" }]}>{item}</Text>
             </TouchableOpacity>
           ))}
 
-          <View style={styles.menuItem}>
-            <Text style={styles.menuText}>Language</Text>
-            <Icon name="chevron-down" size={20} color="#000" />
+          <View style={[styles.menuItem, { borderBottomColor: darkMode ? "#444" : "#eee" }]}>
+            <Text style={[styles.menuText, { color: darkMode ? "#fff" : "#000" }]}>Language</Text>
+            <Icon name="chevron-down" size={20} color={darkMode ? "#fff" : "#000"} />
           </View>
 
           {/* Logout Button */}
-          <TouchableOpacity style={styles.logoutButton}>
+          <TouchableOpacity style={[styles.logoutButton, { borderBottomColor: darkMode ? "#444" : "#eee" }]}>
             <Text style={styles.logoutText}>Logout</Text>
           </TouchableOpacity>
         </View>
@@ -112,12 +114,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 15,
     paddingVertical: 20,
-    
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    
   },
   profileContainer: {
     alignItems: "center",
@@ -141,7 +141,6 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 40,
     borderWidth: 3,
-    borderColor: "#fff",
     zIndex: 99,
   },
   editIcon: {
@@ -156,11 +155,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 18,
     fontWeight: "bold",
-    color: "#fff",
   },
   joinDate: {
     fontSize: 14,
-    color: "#fff",
   },
   scrollContainer: {
     paddingBottom: 60, // Prevents cut-off content
@@ -172,6 +169,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 5,
   },
+  darkMenu: {
+    backgroundColor: "#333", // Dark background for menu in dark mode
+  },
   menuItem: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -180,7 +180,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderBottomWidth: 1,
-    borderBottomColor: "#eee",
   },
   menuText: {
     fontSize: 16,
@@ -193,7 +192,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginTop: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#eee",
   },
   logoutText: {
     fontSize: 16,
