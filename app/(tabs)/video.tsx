@@ -1,5 +1,4 @@
 import { SafeAreaView, StyleSheet, View } from 'react-native';
-
 import TopBar from '@/components/TopBar';
 import RunningText from '@/components/RunningText';
 import { ThemedView } from '@/components/ThemedView';

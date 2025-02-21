@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
+  const navigation = useNavigation(); // ✅ Access navigation
+
   return (
     <View style={styles.container}>
       {/* Menu Icon */}
@@ -25,7 +28,7 @@ const Header = () => {
         <TouchableOpacity onPress={() => console.log('Gamepad clicked')}>
           <FontAwesome5 name="gamepad" size={28} color="#3580C3" style={styles.icon} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => console.log('Search clicked')}>
+        <TouchableOpacity onPress={() => navigation.navigate('SearchScreen')}>
           <FontAwesome5 name="search" size={28} color="#3580C3" style={styles.icon} />
         </TouchableOpacity>
       </View>
@@ -40,19 +43,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 12,
     paddingHorizontal: 15,
-    backgroundColor: '#ffffff', // Full opacity white
+    backgroundColor: '#ffffff',
     width: '100%',
     position: 'absolute',
     top: 40,
     left: 0,
     right: 0,
-    zIndex: 10, // Keeps it above other content
-    elevation: 4, // Android shadow
-    shadowColor: '#000', // iOS shadow
+    zIndex: 10,
+    elevation: 4,
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    opacity: 1, // Ensure full opacity
+    opacity: 1,
   },
   logo: {
     width: 100,
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginLeft: 35, // Used instead of `gap`
+    marginLeft: 35,
   },
 });
 

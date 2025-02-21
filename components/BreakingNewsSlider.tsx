@@ -11,25 +11,25 @@ const newsData = [
     id: '1',
     title: 'Breaking News 1',
     description: "Kolkata doctor rape-murder case gets murkier as BJP posts fresh video of victim's parents.",
-    image: require('../assets/images/slider1.png'),
+    image: { uri: 'https://img.youtube.com/vi/ANd5zEOqwTg/mqdefault.jpg' },
   },
   {
     id: '2',
     title: 'Breaking News 2',
     description: "Major earthquake in Asia; tremors felt across multiple countries.",
-    image: require('../assets/images/slider1.png'),
+    image: { uri: 'https://img.youtube.com/vi/ANd5zEOqwTg/mqdefault.jpg' },
   },
   {
     id: '3',
     title: 'Breaking News 3',
     description: "Stock market crashes amid global recession fears.",
-    image: require('../assets/images/slider1.png'),
+    image: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Technology_6.jpg' },
   },
   {
     id: '4',
     title: 'Breaking News 4',
     description: "New AI technology changes the job market forever.",
-    image: require('../assets/images/slider1.png'),
+    image: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Smart_Tourism.jpg' },
   },
 ];
 

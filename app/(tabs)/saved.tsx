@@ -1,15 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import TopBar from '@/components/TopBar';
+import RunningText from '@/components/RunningText';
+import { ThemedView } from '@/components/ThemedView';
+import BookmarkScreen from '@/components/BookmarkScreen';
 
 const saved = () => {
   return (
-    <View style={styles.container}>
-    <Text style={styles.title}>Saved Page</Text>
-  </View>
+    <SafeAreaView style={styles.safeArea}>
+      <TopBar />
+      <View style={styles.runningTextContainer}>
+        <RunningText />
+      </View>
+
+      {/* Main Content */}
+      <ThemedView style={styles.content}>
+      <BookmarkScreen />
+      </ThemedView>
+    </SafeAreaView>
+  
   )
 }
 
-export default saved
+export default saved;
 
 const styles = StyleSheet.create({
     container: {

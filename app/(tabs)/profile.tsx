@@ -1,11 +1,17 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { ThemedView } from '@/components/ThemedView';
+import ProfileScreen from "@/components/ProfileScreen";
 
 const profile = () => {
   return (
      <View style={styles.container}>
-         <Text style={styles.title}>Profile Page</Text>
-       </View>
+        
+       {/* Main Content */}
+      <ThemedView style={styles.content}>
+        <ProfileScreen />
+      </ThemedView>
+     </View>
   );
 };
 

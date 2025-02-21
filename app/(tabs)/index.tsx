@@ -22,8 +22,7 @@ export default function HomeScreen() {
         <BreakingNewsSlider />
         <NewsFeed />
       </ThemedView>
-
-      
+     
     </SafeAreaView>
   );
 }

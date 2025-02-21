@@ -21,14 +21,28 @@ const videoData = [
     id: '2',
     title: 'Entertainment Gossip',
     category: 'Entertainment',
-    thumbnail: videoThumbnail,
+    thumbnail: { uri: 'https://img.youtube.com/vi/ANd5zEOqwTg/mqdefault.jpg' },
     videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
   },
   {
     id: '3',
+    title: 'Entertainment Gossip',
+    category: 'Entertainment',
+    thumbnail: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Technology_6.jpg' },
+    videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+  },
+  {
+    id: '4',
+    title: 'Entertainment Gossip',
+    category: 'Entertainment',
+    thumbnail: { uri: 'https://www.dxbnewsnetwork.com/upload/blog/Smart_Tourism.jpg' },
+    videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+  },
+  {
+    id: '5',
     title: 'Sports Highlights',
     category: 'Sports',
-    thumbnail: { uri: 'https://via.placeholder.com/300' }, // Remote Image Example
+    thumbnail: { uri: 'https://markaziasolutions.com/mi-hrms/assets/front_end/images/hero_1.jpg' },
     videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
   },
 ];
